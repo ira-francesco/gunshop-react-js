@@ -1,0 +1,40 @@
+button:hover{
+  background-color: #eea441;
+}
+
+
+li:hover{
+  background-color: #0f0f0f;
+}
+
+li{
+  padding: 2px;
+  transition: background-color 0.5s;
+  animation: fadeInList 1s;
+}
+
+
+@keyframes slideLeft{
+  from{margin-left: -200px; opacity: 0;}
+  to{margin-left: 0px;  opacity: 1;}
+}
+
+@keyframes fadeInList{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+h1, h3, button{
+  animation: slideLeft 2s;
+}
+
+button{
+  width: 200px;
+  height: 50px;
+  background: none;
+  color: #fff;
+  border: 2px solid #eea441;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
