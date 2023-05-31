@@ -1,27 +1,50 @@
 import ShopComponent from "./ShopComponent";
-import glock17 from "./assets/handguns/glock17.png";
 import "./shop.scss";
+import { handguns, rifles } from "./products";
 export default function Shop() {
   return (
     <div
       className="Shop"
       style={{
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "flex-start",
-        alignItems: "center",
         padding: "4rem"
       }}
     >
       <div
         className="container"
-        style={{ marginTop: "-8rem", display: "flex", columnGap: "6rem" }}
+        style={{
+          marginTop: "12rem",
+          display: "flex",
+          columnGap: "6rem",
+          width: "100%"
+        }}
       >
-        <ShopComponent img={glock17} />
-        <ShopComponent img={glock17} />
-        <ShopComponent img={glock17} />
-        <ShopComponent img={glock17} />
+        {handguns.map((handgun, i) => (
+          <ShopComponent
+            img={handgun.image}
+            name={handgun.name}
+            price={handgun.price}
+            key={i}
+          />
+        ))}
+      </div>
+      <div
+        id="rifles"
+        className="container"
+        style={{
+          marginTop: "12rem",
+          display: "flex",
+          columnGap: "6rem",
+          width: "100%"
+        }}
+      >
+        {rifles.map((rifle, i) => (
+          <ShopComponent
+            img={rifle.image}
+            name={rifle.name}
+            price={rifle.price}
+            key={i}
+          />
+        ))}
       </div>
     </div>
   );

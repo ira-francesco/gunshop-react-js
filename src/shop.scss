@@ -1,24 +1,37 @@
 body{
-    background-color: #1d1d1d;
-  }
-  
-  .ShopComponent{
-    box-shadow: 10px 10px 18px 16px #0f0f0f;
-    padding: 1rem 1.5rem;
-  
-    #image-container {
+  background-color: #1d1d1d;
+}
+
+.ShopComponent{
+  padding: 1rem 1.5rem;
+  animation: slideLeft 1s;
+
+  #image-container {
     width: 125px;
-    height: 250px;
+    height: 180px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 250px;
-    }
-  
-    div{
-      display: flex;
-      align-items: center;
-      gap: 5rem;
-      color: #eee;
-      margin-top: 3rem;
-    }
+    background-size: 140px;
+    width: 100%;
   }
+
+  div{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #eee;
+    margin-top: 3rem;
+  }
+}
+
+@keyframes slideLeft{
+  from{margin-left: -200px; opacity: 0;}
+  to{margin-left: 0px;  opacity: 1;}
+}
+
+
+#rifles{
+  #image-container{
+    width: 180px;
+  }
+}
