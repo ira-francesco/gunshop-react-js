@@ -1,6 +1,6 @@
 import ShopComponent from "./ShopComponent";
 import "./shop.scss";
-import { handguns, rifles } from "./products";
+import { handguns, rifles, plateCarriers } from "./products";
 export default function Shop() {
   return (
     <div
@@ -45,6 +45,32 @@ export default function Shop() {
             key={i}
           />
         ))}
+      </div>
+      <div
+        className="container"
+        style={{
+          marginTop: "12rem",
+          display: "flex",
+          columnGap: "6rem"
+        }}
+      >
+        {plateCarriers.map((plateCarrier, i) => (
+          <ShopComponent
+            img={plateCarrier.image}
+            name={plateCarrier.name}
+            price={plateCarrier.price}
+            key={i}
+          />
+        ))}
+      </div>
+      <div
+        className="container"
+        style={{
+          marginTop: "12rem",
+          display: "flex",
+          columnGap: "6rem"
+        }}
+      >
       </div>
     </div>
   );
