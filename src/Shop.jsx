@@ -1,10 +1,10 @@
-import { useCart } from "./CartContext"; // Importa il contesto
+import { useCart } from "./CartContext";
 import ShopComponent from "./ShopComponent";
 import "./shop.scss";
 import { smartphones, laptops, backpacks } from "./products";
 
 const Shop = () => {
-  const { addToCart } = useCart(); // Usa il contesto per ottenere addToCart
+  const { addToCart } = useCart();
 
   return (
     <div className="Shop" style={{ padding: "4rem" }}>
