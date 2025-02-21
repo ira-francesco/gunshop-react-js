@@ -1,0 +1,199 @@
+/* Resetta margini e padding per una base uniforme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;  /* Dark background for the page */
+    color: #e0e0e0;  /* Light text for readability */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Carrello */
+  .shopping-cart {
+    margin: 6rem auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #1f1f1f;  /* Dark background for the cart */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+  }
+  
+  .cart-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;  /* White title text */
+    margin-bottom: 1.5rem;
+  }
+  
+  .empty-cart {
+    font-size: 1.2rem;
+    color: #bbb;  /* Light gray text */
+    margin-top: 2rem;
+  }
+  
+  .cart-items {
+    width: 100%;
+  }
+  
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;  /* Darker border */
+  }
+  
+  .total-amount {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;  /* White text for total */
+  }
+  
+  .checkout-button {
+    padding: 0.2rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #eea441;  /* Gold color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+  
+    &:hover {
+      background-color: #d88f2e;  /* Darker gold on hover */
+    }
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #333;  /* Dark border for item separation */
+    margin-bottom: 1rem;
+    width: 100%;
+  
+    &:hover {
+      background-color: #333;  /* Slightly darker on hover */
+    }
+  }
+  
+  .cart-item img {
+    max-width: 80px;
+    border-radius: 5px;
+  }
+  
+  .cart-item-info {
+    flex-grow: 1;
+    margin-left: 1rem;
+  }
+  
+  .cart-item-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;  /* White text for product name */
+  }
+  
+  .cart-item-price {
+    font-size: 1.2rem;
+    color: #bbb;  /* Light gray for price */
+  }
+  
+  .cart-item-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .remove-button,
+  .update-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #dc3545;  /* Red for remove */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #c82333;  /* Darker red on hover */
+    }
+  }
+  
+  .update-button {
+    background-color: #007bff;  /* Blue for update */
+    
+    &:hover {
+      background-color: #0069d9;  /* Darker blue on hover */
+    }
+  }
+  
+  /* Styling per il carrello su dispositivi mobili */
+  @media (max-width: 768px) {
+    .shopping-cart {
+      width: 90%;
+      padding: 1.5rem;
+    }
+  
+    .cart-title {
+      font-size: 1.8rem;
+    }
+  
+    .total-amount {
+      font-size: 1.4rem;
+    }
+  
+    .checkout-button {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+    }
+  
+    .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cart-item-info {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;  /* Dark background */
+    color: #fff;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: #eea441;  /* Gold on hover */
+  }
+  

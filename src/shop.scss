@@ -1,17 +1,18 @@
 body{
   background-color: #1d1d1d;
+  scroll-behavior: smooth;
 }
-
 .ShopComponent{
   padding: 1rem 1.5rem;
   animation: slideLeft 1s;
+  padding-top: -4rem;
 
   #image-container {
-    width: 125px;
-    height: 180px;
+    width: 200px;
+    height: 250px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 140px;
+    background-size: 200px;
     width: 100%;
   }
 

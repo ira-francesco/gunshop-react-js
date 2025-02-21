@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import Shop from "./Shop";
 import ShoppingCart from "./ShoppingCart";
 import Home from "./Home";
+import { CartProvider } from "./CartContext";
+
 export default function App() {
   const style = document.body.style;
 
@@ -12,11 +14,12 @@ export default function App() {
     style.padding = "0px";
     style.width = "100%";
     style.height = "100vh";
-    style.overflow = "hidden";
     style.fontFamily = "sans-serif";
   }, []);
 
   return (
+    
+    <CartProvider>
     <Router>
       <Navbar />
       <div
@@ -33,5 +36,6 @@ export default function App() {
         </Routes>
       </div>
     </Router>
+    </CartProvider>
   );
 }

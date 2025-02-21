@@ -25,21 +25,20 @@ export default function Home() {
         }}
       >
         <h1 style={{ color: "#fff", fontSize: "4rem", marginTop: "-10rem" }}>
-          Weapons & Military Equipment
+          Tech & Travel Equipment
         </h1>
         <h3
           style={{
             color: "#fff",
-            marginTop: "-1.5rem",
+            marginTop: "1.5rem",
             fontSize: "2rem",
             fontWeight: "lighter"
           }}
         >
-          We guarantee you the best quality for your weapons and personal
-          equipment.
+          We guarantee you the best quality for your tech.
         </h3>
-        <Link to="/Shop" style={{ textDecoration: "none", color: "#fff" }}>
-          <button style={{}}>SHOP NOW</button>
+        <Link to="/Shop" style={{ textDecoration: "none", color: "#fff", marginTop: "60px" }}>
+          <button style={{}}>COMPRA ORA</button>
         </Link>
       </div>
     </div>

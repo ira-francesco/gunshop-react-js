@@ -1,77 +1,40 @@
+import { useCart } from "./CartContext"; // Importa il contesto
 import ShopComponent from "./ShopComponent";
 import "./shop.scss";
-import { handguns, rifles, plateCarriers } from "./products";
-export default function Shop() {
+import { smartphones, laptops, backpacks } from "./products";
+
+const Shop = () => {
+  const { addToCart } = useCart(); // Usa il contesto per ottenere addToCart
+
   return (
-    <div
-      className="Shop"
-      style={{
-        padding: "4rem"
-      }}
-    >
-      <div
-        className="container"
-        style={{
-          marginTop: "12rem",
-          display: "flex",
-          columnGap: "6rem",
-          width: "100%"
-        }}
-      >
-        {handguns.map((handgun, i) => (
-          <ShopComponent
-            img={handgun.image}
-            name={handgun.name}
-            price={handgun.price}
-            key={i}
-          />
-        ))}
-      </div>
-      <div
-        id="rifles"
-        className="container"
-        style={{
-          marginTop: "12rem",
-          display: "flex",
-          columnGap: "6rem",
-          width: "100%"
-        }}
-      >
-        {rifles.map((rifle, i) => (
-          <ShopComponent
-            img={rifle.image}
-            name={rifle.name}
-            price={rifle.price}
-            key={i}
-          />
-        ))}
-      </div>
-      <div
-        className="container"
-        style={{
-          marginTop: "12rem",
-          display: "flex",
-          columnGap: "6rem"
-        }}
-      >
-        {plateCarriers.map((plateCarrier, i) => (
-          <ShopComponent
-            img={plateCarrier.image}
-            name={plateCarrier.name}
-            price={plateCarrier.price}
-            key={i}
-          />
-        ))}
-      </div>
-      <div
-        className="container"
-        style={{
-          marginTop: "12rem",
-          display: "flex",
-          columnGap: "6rem"
-        }}
-      >
-      </div>
+    <div className="Shop" style={{ padding: "4rem" }}>
+      {[{ data: smartphones, idOffset: 0 }, { data: laptops, idOffset: 100 }, { data: backpacks, idOffset: 200 }].map(
+        (category, index) => (
+          <div
+            key={index}
+            className="container"
+            style={{ marginTop: "12rem", display: "flex", columnGap: "6rem", width: "100%" }}
+          >
+            {category.data.map((item, i) => (
+              <div key={i} className="shop-item">
+                <ShopComponent
+                  img={item.image}
+                  name={item.name}
+                  price={item.price}
+                />
+                <button
+                  className="add-to-cart-button"
+                  onClick={() => addToCart({ id: i + category.idOffset, ...item })}
+                >
+                  Aggiungi al carrello
+                </button>
+              </div>
+            ))}
+          </div>
+        )
+      )}
     </div>
   );
-}
+};
+
+export default Shop;
