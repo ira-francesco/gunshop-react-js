@@ -1,10 +1,10 @@
 const CartItem = ({ item, updateQuantity, removeItem }) => {
     const handleRemove = () => {
-      removeItem(item.id);  // Rimuove l'elemento dal carrello
+      removeItem(item.id);
     };
   
     const handleQuantityChange = (event) => {
-      updateQuantity(item.id, parseInt(event.target.value, 10));  // Aggiorna la quantità
+      updateQuantity(item.id, parseInt(event.target.value, 10)); 
     };
   
     return (
